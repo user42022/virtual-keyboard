@@ -1,0 +1,59 @@
+.textarea {
+  display: block;
+  margin: 10vh auto 1vh;
+  height: 200px;
+  width: 820px;
+  font-size: 18px;
+}
+
+.description {
+  width: 820px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.keyboard {
+  background-color: grey;
+  margin: 0 auto;
+  width: 810px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.keyboard__row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.key {
+  border-radius: 3px;
+  background-color: lightgrey;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.5s;
+}
+.key:hover {
+  background-color: aquamarine;
+}
+.key_service {
+  background-color: darkslategray;
+  color: white;
+  padding: 0 5px;
+}
+.key_double-width {
+  width: 80px;
+}
+.key_space {
+  width: 360px;
+}
+.key_active {
+  transform: scale(0.9);
+  background-color: aqua;
+}/*# sourceMappingURL=style.css.map */
