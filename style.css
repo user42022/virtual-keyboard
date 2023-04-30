@@ -30,6 +30,9 @@
 }
 
 .key {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   border-radius: 3px;
   background-color: lightgrey;
   width: 40px;
@@ -71,6 +74,9 @@
   border-radius: 30px;
   background-color: azure;
   border: 1px solid grey;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .lang-shortcut_ru {
   background-color: burlywood;
