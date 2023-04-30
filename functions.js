@@ -24,22 +24,26 @@ export function createKeyboard() {
 }
 export function highlightKey(event) {
   event.preventDefault();
-  const key = document.getElementById(`${event.code}`);
-  key.classList.add('key_active');
+  if (event.code in KEYBOARD_OBJECT) {
+    const key = document.getElementById(`${event.code}`);
+    key.classList.add('key_active');
+  }
 }
 export function highlightKeyOnMouseDown() {
   this.classList.add('key_active');
 }
 export function removeHighlightKey(event) {
-  const key = document.getElementById(`${event.code}`);
-  key.classList.remove('key_active');
-  if (event.code === 'CapsLock') {
-    if (+localStorage.getItem('capslock')) {
-      localStorage.setItem('capslock', '0');
-      key.classList.remove('key_active');
-    } else {
-      localStorage.setItem('capslock', '1');
-      key.classList.add('key_active');
+  if (event.code in KEYBOARD_OBJECT) {
+    const key = document.getElementById(`${event.code}`);
+    key.classList.remove('key_active');
+    if (event.code === 'CapsLock') {
+      if (+localStorage.getItem('capslock')) {
+        localStorage.setItem('capslock', '0');
+        key.classList.remove('key_active');
+      } else {
+        localStorage.setItem('capslock', '1');
+        key.classList.add('key_active');
+      }
     }
   }
 }
