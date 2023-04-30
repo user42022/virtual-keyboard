@@ -21,8 +21,28 @@ export function createKeyboard() {
   return keyboard;
 }
 export function highlightKey(event) {
-  document.getElementById(`${event.code}`).classList.add('key_active');
+  event.preventDefault();
+  const key = document.getElementById(`${event.code}`);
+  key.classList.add('key_active');
 }
 export function removeHighlightKey(event) {
-  document.getElementById(`${event.code}`).classList.remove('key_active');
+  const key = document.getElementById(`${event.code}`);
+  key.classList.remove('key_active');
+  if (event.code === 'CapsLock') {
+    if (+localStorage.getItem('capslock')) {
+      localStorage.setItem('capslock', '0');
+      key.classList.remove('key_active');
+    } else {
+      localStorage.setItem('capslock', '1');
+      key.classList.add('key_active');
+    }
+  }
+}
+export function toggleHighlightOnClick() {
+  this.classList.toggle('key_active');
+  if (+localStorage.getItem('capslock')) {
+    localStorage.setItem('capslock', '0');
+  } else {
+    localStorage.setItem('capslock', '1');
+  }
 }
