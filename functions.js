@@ -1,0 +1,22 @@
+export function createKeyElement(target, optionsList) {
+  optionsList.forEach((options) => {
+    const newElement = document.createElement('div');
+    options.styleList.forEach((styleName) => {
+      newElement.classList.add(styleName);
+    });
+    const [ru,, en] = options.content;
+    newElement.id = options.id;
+    newElement.textContent = !!localStorage.getItem('lang') ? ru : en;
+    target.append(newElement);
+  });
+}
+export function createKeyboard() {
+  const keyboard = document.createElement('div');
+  keyboard.classList.add('keyboard');
+  for (let i = 0; i < 5; i += 1) {
+    const keyboardRow = document.createElement('div');
+    keyboardRow.classList.add('keyboard__row');
+    keyboard.append(keyboardRow);
+  }
+  return keyboard;
+}

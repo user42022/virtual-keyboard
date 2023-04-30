@@ -1,188 +1,259 @@
-export default {
-  backQuote: {
-    code: 'Backquote', styleList: ['key'], content: ['ё', 'Ё', '`', '~'],
+export const KEYBOARD_OBJECT = {
+  Backquote: {
+    id: 'Backquote', styleList: ['key'], content: ['ё', 'Ё', '`', '~'],
   },
-  digitOne: {
-    code: 'Digit1', styleList: ['key'], content: ['1', '!', '1', '!'],
+  Digit1: {
+    id: 'Digit1', styleList: ['key'], content: ['1', '!', '1', '!'],
   },
-  digitTwo: {
-    code: 'Digit2', styleList: ['key'], content: ['2', '"', '2', '@'],
+  Digit2: {
+    id: 'Digit2', styleList: ['key'], content: ['2', '"', '2', '@'],
   },
-  digitThree: {
-    code: 'Digit3', styleList: ['key'], content: ['3', '№', '3', '#'],
+  Digit3: {
+    id: 'Digit3', styleList: ['key'], content: ['3', '№', '3', '#'],
   },
-  digitFour: {
-    code: 'Digit4', styleList: ['key'], content: ['4', ';', '4', '$'],
+  Digit4: {
+    id: 'Digit4', styleList: ['key'], content: ['4', ';', '4', '$'],
   },
-  digitFive: {
-    code: 'Digit5', styleList: ['key'], content: ['5', '%', '5', '%'],
+  Digit5: {
+    id: 'Digit5', styleList: ['key'], content: ['5', '%', '5', '%'],
   },
-  digitSix: {
-    code: 'Digit6', styleList: ['key'], content: ['6', ':', '6', '^'],
+  Digit6: {
+    id: 'Digit6', styleList: ['key'], content: ['6', ':', '6', '^'],
   },
-  digitSeven: {
-    code: 'Digit7', styleList: ['key'], content: ['7', '?', '7', '&'],
+  Digit7: {
+    id: 'Digit7', styleList: ['key'], content: ['7', '?', '7', '&'],
   },
-  digitEight: {
-    code: 'Digit8', styleList: ['key'], content: ['8', '*', '8', '*'],
+  Digit8: {
+    id: 'Digit8', styleList: ['key'], content: ['8', '*', '8', '*'],
   },
-  digitNine: {
-    code: 'Digit9', styleList: ['key'], content: ['9', '(', '9', '('],
+  Digit9: {
+    id: 'Digit9', styleList: ['key'], content: ['9', '(', '9', '('],
   },
-  digitZero: {
-    code: 'Digit0', styleList: ['key'], content: ['0', ')', '0', ')'],
+  Digit0: {
+    id: 'Digit0', styleList: ['key'], content: ['0', ')', '0', ')'],
   },
-  backspace: {
-    code: 'Backspace', styleList: ['key', 'key_service', 'key_double-width'], content: ['Back space'],
+  Minus: {
+    id: 'Minus', styleList: ['key'], content: ['-', '_', '-', '_'],
   },
-  tab: {
-    code: 'Tab', styleList: ['key', 'key_service'], content: ['Tab'],
+  Equal: {
+    id: 'Equal', styleList: ['key'], content: ['=', '+', '=', '+'],
   },
-  keyQ: {
-    code: 'KeyQ', styleList: ['key'], content: ['й', 'Й', 'q', 'Q'],
+  Backspace: {
+    id: 'Backspace', styleList: ['key', 'key_service', 'key_double-width'], content: ['Back space', 'Back space', 'Back space', 'Back space'],
   },
-  keyW: {
-    code: 'KeyW', styleList: ['key'], content: ['ц', 'Ц', 'w', 'W'],
+  Tab: {
+    id: 'Tab', styleList: ['key', 'key_service'], content: ['Tab', 'Tab', 'Tab', 'Tab'],
   },
-  keyE: {
-    code: 'KeyE', styleList: ['key'], content: ['у', 'У', 'e', 'E'],
+  KeyQ: {
+    id: 'KeyQ', styleList: ['key'], content: ['й', 'Й', 'q', 'Q'],
   },
-  keyR: {
-    code: 'KeyR', styleList: ['key'], content: ['к', 'К', 'r', 'R'],
+  KeyW: {
+    id: 'KeyW', styleList: ['key'], content: ['ц', 'Ц', 'w', 'W'],
   },
-  keyT: {
-    code: 'KeyT', styleList: ['key'], content: ['е', 'Е', 't', 'T'],
+  KeyE: {
+    id: 'KeyE', styleList: ['key'], content: ['у', 'У', 'e', 'E'],
   },
-  keyY: {
-    code: 'KeyY', styleList: ['key'], content: ['н', 'Н', 'y', 'Y'],
+  KeyR: {
+    id: 'KeyR', styleList: ['key'], content: ['к', 'К', 'r', 'R'],
   },
-  keyU: {
-    code: 'KeyU', styleList: ['key'], content: ['г', 'Г', 'u', 'U'],
+  KeyT: {
+    id: 'KeyT', styleList: ['key'], content: ['е', 'Е', 't', 'T'],
   },
-  keyI: {
-    code: 'KeyI', styleList: ['key'], content: ['ш', 'Ш', 'i', 'I'],
+  KeyY: {
+    id: 'KeyY', styleList: ['key'], content: ['н', 'Н', 'y', 'Y'],
   },
-  keyO: {
-    code: 'KeyO', styleList: ['key'], content: ['щ', 'Щ', 'o', 'O'],
+  KeyU: {
+    id: 'KeyU', styleList: ['key'], content: ['г', 'Г', 'u', 'U'],
   },
-  keyP: {
-    code: 'KeyP', styleList: ['key'], content: ['з', 'З', 'p', 'P'],
+  KeyI: {
+    id: 'KeyI', styleList: ['key'], content: ['ш', 'Ш', 'i', 'I'],
   },
-  bracketLeft: {
-    code: 'BracketLeft', styleList: ['key'], content: ['х', 'Х', '[', '{'],
+  KeyO: {
+    id: 'KeyO', styleList: ['key'], content: ['щ', 'Щ', 'o', 'O'],
   },
-  bracketRight: {
-    code: 'BracketRight', styleList: ['key'], content: ['ъ', 'Ъ', ']', '}'],
+  KeyP: {
+    id: 'KeyP', styleList: ['key'], content: ['з', 'З', 'p', 'P'],
   },
-  backSlash: {
-    code: 'BackSlash', styleList: ['key'], content: ['\\', '/', '\\', '|'],
+  BracketLeft: {
+    id: 'BracketLeft', styleList: ['key'], content: ['х', 'Х', '[', '{'],
   },
-  delete: {
-    code: 'Delete', styleList: ['key', 'key_service'], content: ['Del'],
+  BracketRight: {
+    id: 'BracketRight', styleList: ['key'], content: ['ъ', 'Ъ', ']', '}'],
   },
-  capsLock: {
-    code: 'CapsLock', styleList: ['key', 'key_service', 'key_double-width'], content: ['Caps Lock'],
+  Backslash: {
+    id: 'BackSlash', styleList: ['key'], content: ['\\', '/', '\\', '|'],
   },
-  keyA: {
-    code: 'KeyA', styleList: ['key'], content: ['ф', 'Ф', 'a', 'A'],
+  Delete: {
+    id: 'Delete', styleList: ['key', 'key_service'], content: ['Del', 'Del', 'Del', 'Del'],
   },
-  keyS: {
-    code: 'KeyS', styleList: ['key'], content: ['ы', 'Ы', 's', 'S'],
+  CapsLock: {
+    id: 'CapsLock', styleList: ['key', 'key_service', 'key_double-width'], content: ['Caps Lock', 'Caps Lock', 'Caps Lock', 'Caps Lock'],
   },
-  keyD: {
-    code: 'KeyD', styleList: ['key'], content: ['в', 'В', 'd', 'D'],
+  KeyA: {
+    id: 'KeyA', styleList: ['key'], content: ['ф', 'Ф', 'a', 'A'],
   },
-  keyF: {
-    code: 'KeyF', styleList: ['key'], content: ['а', 'А', 'f', 'F'],
+  KeyS: {
+    id: 'KeyS', styleList: ['key'], content: ['ы', 'Ы', 's', 'S'],
   },
-  keyG: {
-    code: 'KeyG', styleList: ['key'], content: ['п', 'П', 'g', 'G'],
+  KeyD: {
+    id: 'KeyD', styleList: ['key'], content: ['в', 'В', 'd', 'D'],
   },
-  keyH: {
-    code: 'KeyH', styleList: ['key'], content: ['р', 'Р', 'h', 'H'],
+  KeyF: {
+    id: 'KeyF', styleList: ['key'], content: ['а', 'А', 'f', 'F'],
   },
-  keyJ: {
-    code: 'KeyJ', styleList: ['key'], content: ['о', 'О', 'j', 'J'],
+  KeyG: {
+    id: 'KeyG', styleList: ['key'], content: ['п', 'П', 'g', 'G'],
   },
-  keyK: {
-    code: 'KeyK', styleList: ['key'], content: ['л', 'Л', 'k', 'K'],
+  KeyH: {
+    id: 'KeyH', styleList: ['key'], content: ['р', 'Р', 'h', 'H'],
   },
-  keyL: {
-    code: 'KeyL', styleList: ['key'], content: ['д', 'Д', 'l', 'L'],
+  KeyJ: {
+    id: 'KeyJ', styleList: ['key'], content: ['о', 'О', 'j', 'J'],
   },
-  semicolon: {
-    code: 'Semicolon', styleList: ['key'], content: ['ж', 'Ж', ';', ':'],
+  KeyK: {
+    id: 'KeyK', styleList: ['key'], content: ['л', 'Л', 'k', 'K'],
   },
-  quote: {
-    code: 'Quote', styleList: ['key'], content: ['э', 'Э', '\'', '"'],
+  KeyL: {
+    id: 'KeyL', styleList: ['key'], content: ['д', 'Д', 'l', 'L'],
   },
-  enter: {
-    code: 'Enter', styleList: ['key', 'key_service', 'key_double-width'], content: ['Enter'],
+  Semicolon: {
+    id: 'Semicolon', styleList: ['key'], content: ['ж', 'Ж', ';', ':'],
   },
-  shiftLeft: {
-    code: 'ShiftLeft', styleList: ['key', 'key_service', 'key_double-width'], content: ['Shift'],
+  Quote: {
+    id: 'Quote', styleList: ['key'], content: ['э', 'Э', '\'', '"'],
   },
-  keyZ: {
-    code: 'KeyZ', styleList: ['key'], content: ['я', 'Я', 'z', 'Z'],
+  Enter: {
+    id: 'Enter', styleList: ['key', 'key_service', 'key_double-width'], content: ['Enter', 'Enter', 'Enter', 'Enter'],
   },
-  keyX: {
-    code: 'KeyX', styleList: ['key'], content: ['ч', 'Ч', 'x', 'X'],
+  ShiftLeft: {
+    id: 'ShiftLeft', styleList: ['key', 'key_service', 'key_double-width'], content: ['Shift', 'Shift', 'Shift', 'Shift'],
   },
-  keyC: {
-    code: 'KeyC', styleList: ['key'], content: ['с', 'С', 'c', 'C'],
+  KeyZ: {
+    id: 'KeyZ', styleList: ['key'], content: ['я', 'Я', 'z', 'Z'],
   },
-  keyV: {
-    code: 'KeyV', styleList: ['key'], content: ['м', 'М', 'v', 'V'],
+  KeyX: {
+    id: 'KeyX', styleList: ['key'], content: ['ч', 'Ч', 'x', 'X'],
   },
-  keyB: {
-    code: 'KeyB', styleList: ['key'], content: ['и', 'И', 'b', 'B'],
+  KeyC: {
+    id: 'KeyC', styleList: ['key'], content: ['с', 'С', 'c', 'C'],
   },
-  keyN: {
-    code: 'KeyN', styleList: ['key'], content: ['т', 'Т', 'n', 'N'],
+  KeyV: {
+    id: 'KeyV', styleList: ['key'], content: ['м', 'М', 'v', 'V'],
   },
-  keyM: {
-    code: 'KeyM', styleList: ['key'], content: ['ь', 'Ь', 'm', 'M'],
+  KeyB: {
+    id: 'KeyB', styleList: ['key'], content: ['и', 'И', 'b', 'B'],
   },
-  comma: {
-    code: 'Comma', styleList: ['key'], content: ['б', 'Б', ',', '<'],
+  KeyN: {
+    id: 'KeyN', styleList: ['key'], content: ['т', 'Т', 'n', 'N'],
   },
-  period: {
-    code: 'Period', styleList: ['key'], content: ['ю', 'Ю', '.', '>'],
+  KeyM: {
+    id: 'KeyM', styleList: ['key'], content: ['ь', 'Ь', 'm', 'M'],
   },
-  slash: {
-    code: 'Slash', styleList: ['key'], content: ['.', ',', '/', '?'],
+  Comma: {
+    id: 'Comma', styleList: ['key'], content: ['б', 'Б', ',', '<'],
   },
-  arrowUp: {
-    code: 'ArrowUp', styleList: ['key', 'key_service'], content: ['↑'],
+  Period: {
+    id: 'Period', styleList: ['key'], content: ['ю', 'Ю', '.', '>'],
   },
-  shiftRight: {
-    code: 'ShiftRight', styleList: ['key', 'key_service', 'key_double-width'], content: ['Shift'],
+  Slash: {
+    id: 'Slash', styleList: ['key'], content: ['.', ',', '/', '?'],
   },
-  controlLeft: {
-    code: 'ControlLeft', styleList: ['key', 'key_service'], content: ['Ctrl'],
+  ArrowUp: {
+    id: 'ArrowUp', styleList: ['key', 'key_service'], content: ['↑', '↑', '↑', '↑'],
   },
-  metaLeft: {
-    code: 'MetaLeft', styleList: ['key', 'key_service'], content: ['Win'],
+  ShiftRight: {
+    id: 'ShiftRight', styleList: ['key', 'key_service', 'key_double-width'], content: ['Shift', 'Shift', 'Shift', 'Shift'],
   },
-  altLeft: {
-    code: 'AltLeft', styleList: ['key', 'key_service'], content: ['Alt'],
+  ControlLeft: {
+    id: 'ControlLeft', styleList: ['key', 'key_service'], content: ['Ctrl', 'Ctrl', 'Ctrl', 'Ctrl'],
   },
-  space: {
-    code: 'Space', styleList: ['key', 'key_space'], content: [''],
+  MetaLeft: {
+    id: 'MetaLeft', styleList: ['key', 'key_service'], content: ['Win', 'Win', 'Win', 'Win'],
   },
-  altRight: {
-    code: 'AltRight', styleList: ['key', 'key_service'], content: ['Alt'],
+  AltLeft: {
+    id: 'AltLeft', styleList: ['key', 'key_service'], content: ['Alt', 'Alt', 'Alt', 'Alt'],
   },
-  arrowLeft: {
-    code: 'ArrowLeft', styleList: ['key', 'key_service'], content: ['←'],
+  Space: {
+    id: 'Space', styleList: ['key', 'key_space'], content: ['', '', '', ''],
   },
-  arrowDown: {
-    code: 'ArrowDown', styleList: ['key', 'key_service'], content: ['↓'],
+  AltRight: {
+    id: 'AltRight', styleList: ['key', 'key_service'], content: ['Alt', 'Alt', 'Alt', 'Alt'],
   },
-  arrowRight: {
-    code: 'ArrowRight', styleList: ['key', 'key_service'], content: ['→'],
+  ArrowLeft: {
+    id: 'ArrowLeft', styleList: ['key', 'key_service'], content: ['←', '←', '←', '←'],
   },
-  controlRight: {
-    code: 'ControlRight', styleList: ['key', 'key_service'], content: ['Ctrl'],
+  ArrowDown: {
+    id: 'ArrowDown', styleList: ['key', 'key_service'], content: ['↓', '↓', '↓', '↓'],
+  },
+  ArrowRight: {
+    id: 'ArrowRight', styleList: ['key', 'key_service'], content: ['→', '→', '→', '→'],
+  },
+  ControlRight: {
+    id: 'ControlRight', styleList: ['key', 'key_service'], content: ['Ctrl', 'Ctrl', 'Ctrl', 'Ctrl'],
   },
 };
+const firstRow = [KEYBOARD_OBJECT.Backquote,
+  KEYBOARD_OBJECT.Digit1,
+  KEYBOARD_OBJECT.Digit2,
+  KEYBOARD_OBJECT.Digit3,
+  KEYBOARD_OBJECT.Digit4,
+  KEYBOARD_OBJECT.Digit5,
+  KEYBOARD_OBJECT.Digit6,
+  KEYBOARD_OBJECT.Digit7,
+  KEYBOARD_OBJECT.Digit8,
+  KEYBOARD_OBJECT.Digit9,
+  KEYBOARD_OBJECT.Digit0,
+  KEYBOARD_OBJECT.Minus,
+  KEYBOARD_OBJECT.Equal,
+  KEYBOARD_OBJECT.Backspace];
+const secondRow = [KEYBOARD_OBJECT.Tab,
+  KEYBOARD_OBJECT.KeyQ,
+  KEYBOARD_OBJECT.KeyW,
+  KEYBOARD_OBJECT.KeyE,
+  KEYBOARD_OBJECT.KeyR,
+  KEYBOARD_OBJECT.KeyT,
+  KEYBOARD_OBJECT.KeyY,
+  KEYBOARD_OBJECT.KeyU,
+  KEYBOARD_OBJECT.KeyI,
+  KEYBOARD_OBJECT.KeyO,
+  KEYBOARD_OBJECT.KeyP,
+  KEYBOARD_OBJECT.BracketLeft,
+  KEYBOARD_OBJECT.BracketRight,
+  KEYBOARD_OBJECT.Backslash,
+  KEYBOARD_OBJECT.Delete];
+const thirdRow = [KEYBOARD_OBJECT.CapsLock,
+  KEYBOARD_OBJECT.KeyA,
+  KEYBOARD_OBJECT.KeyS,
+  KEYBOARD_OBJECT.KeyD,
+  KEYBOARD_OBJECT.KeyF,
+  KEYBOARD_OBJECT.KeyG,
+  KEYBOARD_OBJECT.KeyH,
+  KEYBOARD_OBJECT.KeyJ,
+  KEYBOARD_OBJECT.KeyK,
+  KEYBOARD_OBJECT.KeyL,
+  KEYBOARD_OBJECT.Semicolon,
+  KEYBOARD_OBJECT.Quote,
+  KEYBOARD_OBJECT.Enter];
+const fourthRow = [KEYBOARD_OBJECT.ShiftLeft,
+  KEYBOARD_OBJECT.KeyZ,
+  KEYBOARD_OBJECT.KeyX,
+  KEYBOARD_OBJECT.KeyC,
+  KEYBOARD_OBJECT.KeyV,
+  KEYBOARD_OBJECT.KeyB,
+  KEYBOARD_OBJECT.KeyN,
+  KEYBOARD_OBJECT.KeyM,
+  KEYBOARD_OBJECT.Comma,
+  KEYBOARD_OBJECT.Period,
+  KEYBOARD_OBJECT.Slash,
+  KEYBOARD_OBJECT.ArrowUp,
+  KEYBOARD_OBJECT.ShiftRight];
+const fifthRow = [KEYBOARD_OBJECT.ControlLeft,
+  KEYBOARD_OBJECT.MetaLeft,
+  KEYBOARD_OBJECT.AltLeft,
+  KEYBOARD_OBJECT.Space,
+  KEYBOARD_OBJECT.AltRight,
+  KEYBOARD_OBJECT.ArrowLeft,
+  KEYBOARD_OBJECT.ArrowDown,
+  KEYBOARD_OBJECT.ArrowRight,
+  KEYBOARD_OBJECT.ControlRight];
+export const keyOder = [firstRow, secondRow, thirdRow, fourthRow, fifthRow];
