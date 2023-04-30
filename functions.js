@@ -104,3 +104,65 @@ export function defineContent() {
     keyArray.forEach((el) => changeContent.call(el, 3, 'lowercase'));
   }
 }
+
+export function inputKeyOnPress(event) {
+  const textarea = document.querySelector('textarea');
+  const key = document.getElementById(`${event.code}`);
+  if (KEYBOARD_OBJECT[`${event.code}`] !== undefined) {
+    if (!key.classList.contains('key_service') || ['ArrowUp', 'ArrowLeft', 'ArrowDown', 'ArrowRight'].includes(key.id)) {
+      const start = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, start)
+      + key.textContent + textarea.value.slice(start);
+      textarea.selectionStart = start + 1;
+    } else if (key.id === 'Delete') {
+      const start = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, start)
+      + textarea.value.slice(start + 1);
+      textarea.selectionStart = start;
+    } else if (key.id === 'Backspace') {
+      const start = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, start - 1 > -1 ? start - 1 : 0)
+      + textarea.value.slice(start);
+      textarea.selectionStart = start === 0 ? 0 : start - 1;
+    } else if (key.id === 'Enter') {
+      const start = textarea.selectionStart;
+      textarea.value = `${textarea.value.slice(0, start)
+      }\n${textarea.value.slice(start)}`;
+      textarea.selectionStart = start + 1;
+    } else if (key.id === 'Tab') {
+      const start = textarea.selectionStart;
+      textarea.value = `${textarea.value.slice(0, start)
+      }\t${textarea.value.slice(start)}`;
+      textarea.selectionStart = start + 1;
+    }
+  }
+}
+export function inputKeyOnClick() {
+  const textarea = document.querySelector('textarea');
+  if (!this.classList.contains('key_service') || ['ArrowUp', 'ArrowLeft', 'ArrowDown', 'ArrowRight'].includes(this.id)) {
+    const start = textarea.selectionStart;
+    textarea.value = textarea.value.slice(0, start)
+      + this.textContent + textarea.value.slice(start);
+    textarea.selectionStart = start + 1;
+  } else if (this.id === 'Delete') {
+    const start = textarea.selectionStart;
+    textarea.value = textarea.value.slice(0, start)
+      + textarea.value.slice(start + 1);
+    textarea.selectionStart = start;
+  } else if (this.id === 'Backspace') {
+    const start = textarea.selectionStart;
+    textarea.value = textarea.value.slice(0, start - 1 > -1 ? start - 1 : 0)
+      + textarea.value.slice(start);
+    textarea.selectionStart = start === 0 ? 0 : start - 1;
+  } else if (this.id === 'Enter') {
+    const start = textarea.selectionStart;
+    textarea.value = `${textarea.value.slice(0, start)
+    }\n${textarea.value.slice(start)}`;
+    textarea.selectionStart = start + 1;
+  } else if (this.id === 'Tab') {
+    const start = textarea.selectionStart;
+    textarea.value = `${textarea.value.slice(0, start)
+    }\t${textarea.value.slice(start)}`;
+    textarea.selectionStart = start + 1;
+  }
+}

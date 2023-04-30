@@ -174,7 +174,7 @@ export const KEYBOARD_OBJECT = {
     id: 'AltLeft', styleList: ['key', 'key_service'], content: ['Alt', 'Alt', 'Alt', 'Alt'],
   },
   Space: {
-    id: 'Space', styleList: ['key', 'key_space'], content: ['', '', '', ''],
+    id: 'Space', styleList: ['key', 'key_space'], content: [' ', ' ', ' ', ' '],
   },
   AltRight: {
     id: 'AltRight', styleList: ['key', 'key_service'], content: ['Alt', 'Alt', 'Alt', 'Alt'],
