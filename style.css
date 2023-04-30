@@ -42,6 +42,10 @@
 .key:hover {
   background-color: aquamarine;
 }
+.key:hover.key_active {
+  transform: scale(0.9);
+  background-color: aqua;
+}
 .key_service {
   background-color: darkslategray;
   color: white;
@@ -53,7 +57,7 @@
 .key_space {
   width: 360px;
 }
-.key_active {
+.key_active, .key:active {
   transform: scale(0.9);
   background-color: aqua;
 }/*# sourceMappingURL=style.css.map */

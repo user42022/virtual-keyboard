@@ -6,7 +6,7 @@ export function createKeyElement(target, optionsList) {
     });
     const [ru,, en] = options.content;
     newElement.id = options.id;
-    newElement.textContent = !!localStorage.getItem('lang') ? ru : en;
+    newElement.textContent = localStorage.getItem('lang') ? ru : en;
     target.append(newElement);
   });
 }
@@ -19,4 +19,10 @@ export function createKeyboard() {
     keyboard.append(keyboardRow);
   }
   return keyboard;
+}
+export function highlightKey(event) {
+  document.getElementById(`${event.code}`).classList.add('key_active');
+}
+export function removeHighlightKey(event) {
+  document.getElementById(`${event.code}`).classList.remove('key_active');
 }

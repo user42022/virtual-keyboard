@@ -1,5 +1,7 @@
 import { KEYBOARD_OBJECT, keyOder } from './keyboard-object.js';
-import { createKeyElement, createKeyboard } from './functions.js';
+import {
+  createKeyElement, createKeyboard, highlightKey, removeHighlightKey,
+} from './functions.js';
 
 document.addEventListener('keydown', (event) => {
   console.log(KEYBOARD_OBJECT[`${event.code}`]);
@@ -12,8 +14,9 @@ const descriptionSecond = descriptionFirst.cloneNode();
 descriptionSecond.textContent = 'Для переключения языка комбинация: левыe ctrl + alt';
 textarea.className = 'textarea';
 const body = document.querySelector('body');
+document.addEventListener('keydown', highlightKey);
+document.addEventListener('keyup', removeHighlightKey);
 body.append(textarea);
-
 console.log(createKeyboard());
 const keyboard = createKeyboard();
 keyboard.querySelectorAll('.keyboard__row').forEach((row, rowIndex) => {
