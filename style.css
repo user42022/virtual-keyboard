@@ -60,4 +60,18 @@
 .key_active, .key:active {
   transform: scale(0.9);
   background-color: aqua;
+}
+
+.lang-shortcut {
+  margin: 1vh auto 0;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 30px;
+  background-color: azure;
+  border: 1px solid grey;
+}
+.lang-shortcut_ru {
+  background-color: burlywood;
 }/*# sourceMappingURL=style.css.map */

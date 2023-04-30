@@ -74,8 +74,24 @@ export function switchLanguage() {
   if (('ControlLeft' in pressedKeys) && ('AltLeft' in pressedKeys)) {
     if (+localStorage.getItem('lang')) {
       localStorage.setItem('lang', '0');
+      document.querySelectorAll('.description')[0].textContent = +localStorage.getItem('lang') ? 'Клавиатура создана в операционной системе Windows 10' : 'The keyboard was created in the Windows 10 operating system';
+      document.querySelectorAll('.description')[1].textContent = +localStorage.getItem('lang') ? 'Для переключения языка комбинация: левыe ctrl + alt' : 'To switch the language combination: left ctrl + alt';
+      document.querySelector('.lang-shortcut').textContent = +localStorage.getItem('lang') ? 'РУ' : 'EN';
+      if (+localStorage.getItem('lang')) {
+        document.querySelector('.lang-shortcut').classList.add('lang-shortcut_ru');
+      } else {
+        document.querySelector('.lang-shortcut').classList.remove('lang-shortcut_ru');
+      }
     } else {
       localStorage.setItem('lang', '1');
+      document.querySelectorAll('.description')[0].textContent = +localStorage.getItem('lang') ? 'Клавиатура создана в операционной системе Windows 10' : 'The keyboard was created in the Windows 10 operating system';
+      document.querySelectorAll('.description')[1].textContent = +localStorage.getItem('lang') ? 'Для переключения языка комбинация: левыe ctrl + alt' : 'To switch the language combination: left ctrl + alt';
+      document.querySelector('.lang-shortcut').textContent = +localStorage.getItem('lang') ? 'РУ' : 'EN';
+      if (+localStorage.getItem('lang')) {
+        document.querySelector('.lang-shortcut').classList.add('lang-shortcut_ru');
+      } else {
+        document.querySelector('.lang-shortcut').classList.remove('lang-shortcut_ru');
+      }
     }
   }
 }
