@@ -81,7 +81,7 @@ export const KEYBOARD_OBJECT = {
     id: 'BracketRight', styleList: ['key'], content: ['ъ', 'Ъ', ']', '}'],
   },
   Backslash: {
-    id: 'BackSlash', styleList: ['key'], content: ['\\', '/', '\\', '|'],
+    id: 'Backslash', styleList: ['key'], content: ['\\', '/', '\\', '|'],
   },
   Delete: {
     id: 'Delete', styleList: ['key', 'key_service'], content: ['Del', 'Del', 'Del', 'Del'],
