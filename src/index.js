@@ -40,7 +40,7 @@ body.append(keyboard);
 body.append(descriptionFirst);
 body.append(descriptionSecond);
 body.append(langShortcut);
-
+document.querySelectorAll('.key').forEach((el) => el.addEventListener('mousedown', (event) => { event.preventDefault(); }));
 [...document.querySelectorAll('.key')].filter((el) => el.id !== 'CapsLock').forEach((el) => {
   el.addEventListener('mousedown', highlightKeyOnMouseDown);
   el.addEventListener('mouseup', removeHighlightKeyOnMouseUp);

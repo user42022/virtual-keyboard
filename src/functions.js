@@ -68,7 +68,6 @@ function changeContent(contentType, modifier) {
   }
 }
 
-/* check pressed keys */
 const pressedKeys = {};
 document.addEventListener('keydown', (event) => { pressedKeys[`${event.code}`] = true; });
 
@@ -133,26 +132,31 @@ export function inputKeyOnPress(event) {
       const start = textarea.selectionStart;
       textarea.value = textarea.value.slice(0, start)
       + key.textContent + textarea.value.slice(start);
+      textarea.setSelectionRange(start, start);
       textarea.selectionStart = start + 1;
     } else if (key.id === 'Delete') {
       const start = textarea.selectionStart;
       textarea.value = textarea.value.slice(0, start)
       + textarea.value.slice(start + 1);
+      textarea.setSelectionRange(start, start);
       textarea.selectionStart = start;
     } else if (key.id === 'Backspace') {
       const start = textarea.selectionStart;
       textarea.value = textarea.value.slice(0, start - 1 > -1 ? start - 1 : 0)
       + textarea.value.slice(start);
+      textarea.setSelectionRange(start - 1 > -1 ? start - 1 : 0, start - 1 > -1 ? start - 1 : 0);
       textarea.selectionStart = start === 0 ? 0 : start - 1;
     } else if (key.id === 'Enter') {
       const start = textarea.selectionStart;
       textarea.value = `${textarea.value.slice(0, start)
       }\n${textarea.value.slice(start)}`;
+      textarea.setSelectionRange(start, start);
       textarea.selectionStart = start + 1;
     } else if (key.id === 'Tab') {
       const start = textarea.selectionStart;
       textarea.value = `${textarea.value.slice(0, start)
       }\t${textarea.value.slice(start)}`;
+      textarea.setSelectionRange(start, start);
       textarea.selectionStart = start + 1;
     }
   }
@@ -163,26 +167,31 @@ export function inputKeyOnClick() {
     const start = textarea.selectionStart;
     textarea.value = textarea.value.slice(0, start)
       + this.textContent + textarea.value.slice(start);
+    textarea.setSelectionRange(start, start);
     textarea.selectionStart = start + 1;
   } else if (this.id === 'Delete') {
     const start = textarea.selectionStart;
     textarea.value = textarea.value.slice(0, start)
       + textarea.value.slice(start + 1);
+    textarea.setSelectionRange(start, start);
     textarea.selectionStart = start;
   } else if (this.id === 'Backspace') {
     const start = textarea.selectionStart;
     textarea.value = textarea.value.slice(0, start - 1 > -1 ? start - 1 : 0)
       + textarea.value.slice(start);
+    textarea.setSelectionRange(start - 1 > -1 ? start - 1 : 0, start - 1 > -1 ? start - 1 : 0);
     textarea.selectionStart = start === 0 ? 0 : start - 1;
   } else if (this.id === 'Enter') {
     const start = textarea.selectionStart;
     textarea.value = `${textarea.value.slice(0, start)
     }\n${textarea.value.slice(start)}`;
+    textarea.setSelectionRange(start, start);
     textarea.selectionStart = start + 1;
   } else if (this.id === 'Tab') {
     const start = textarea.selectionStart;
     textarea.value = `${textarea.value.slice(0, start)
     }\t${textarea.value.slice(start)}`;
+    textarea.setSelectionRange(start, start);
     textarea.selectionStart = start + 1;
   }
 }
