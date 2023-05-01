@@ -80,4 +80,11 @@
 }
 .lang-shortcut_ru {
   background-color: burlywood;
+}
+
+.heading {
+  width: 820px;
+  text-align: center;
+  margin: 5vh auto 0;
+  color: purple;
 }/*# sourceMappingURL=style.css.map */

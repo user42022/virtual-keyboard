@@ -1,4 +1,4 @@
-import { KEYBOARD_OBJECT } from './keyboard-object.js';
+import { KEYBOARD_OBJECT } from './keyboard-object';
 
 export function createKeyElement(target, optionsList) {
   optionsList.forEach((options) => {

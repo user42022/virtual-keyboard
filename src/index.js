@@ -1,9 +1,9 @@
-import { keyOder } from './keyboard-object.js';
+import { keyOder } from './keyboard-object';
 import {
   createKeyElement, createKeyboard, highlightKey,
   removeHighlightKey, toggleHighlightOnClick, switchLanguage, defineContent,
   highlightKeyOnMouseDown, removeHighlightKeyOnMouseUp, inputKeyOnPress, inputKeyOnClick,
-} from './functions.js';
+} from './functions';
 
 localStorage.setItem('capslock', '0');
 document.addEventListener('keydown', switchLanguage);
@@ -19,6 +19,9 @@ if (+localStorage.getItem('lang')) {
 } else {
   langShortcut.classList.remove('lang-shortcut_ru');
 }
+const heading = document.createElement('h1');
+heading.className = 'heading';
+heading.textContent = 'RSS Виртуальная клавиатура';
 const textarea = document.createElement('textarea');
 const descriptionFirst = document.createElement('div');
 descriptionFirst.className = 'description';
@@ -27,7 +30,7 @@ const descriptionSecond = descriptionFirst.cloneNode();
 descriptionSecond.textContent = +localStorage.getItem('lang') ? 'Для переключения языка комбинация: левыe ctrl + alt' : 'To switch the language combination: left ctrl + alt';
 textarea.className = 'textarea';
 const body = document.querySelector('body');
-
+body.append(heading);
 body.append(textarea);
 const keyboard = createKeyboard();
 keyboard.querySelectorAll('.keyboard__row').forEach((row, rowIndex) => {
