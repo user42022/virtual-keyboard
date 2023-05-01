@@ -1,0 +1,6 @@
+node_modules
+*.scss
+*.css.map
+dist
+webpack.config.js
+.eslintignore
